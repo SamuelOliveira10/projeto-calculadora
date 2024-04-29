@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div id="mae">
+        <div id="conteudo"></div>
+
+        <table>
+            <tr class="corp">
+                <td onclick="clean()" style="color: red;">C</td>
+                <td onclick="backSpace()"><</td>
+                <td onclick="count('%')">%</td>
+                <td onclick="insertOperator('/')">/</td>
+            </tr>
+            <tr class="corp"> 
+                <td onclick="insert('7')">7</td>
+                <td onclick="insert('8')">8</td>
+                <td onclick="insert('9')">9</td>
+                <td onclick="insertOperator('*')">x</td>
+            </tr>
+            <tr class="corp">
+                <td onclick="insert('4')">4</td>
+                <td onclick="insert('5')">5</td>
+                <td onclick="insert('6')">6</td>
+                <td onclick="insertOperator('-')">-</td>
+            </tr>
+            <tr class="corp">
+                <td onclick="insert('1')">1</td>
+                <td onclick="insert('2')">2</td>
+                <td onclick="insert('3')">3</td>
+                <td onclick="insertOperator('+')">+</td>
+            </tr>
+            <tr>
+                <td onclick="insert('0')">0</td>
+                <td onclick="insert('00')">00</td>
+                <td onclick="insertPoint()">.</td>
+                <td onclick="result('=')">=</td>
+            </tr>
+        </table>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
