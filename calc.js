@@ -3,7 +3,7 @@ function insert(num){
     let conteudo = document.getElementById('conteudo').innerHTML
     if (num == '0' && conteudo == ''){
         result.innerHTML = '0.'
-    } else {
+    } else if (conteudo.length < 11) {
         result.innerHTML += num
     }
 }
