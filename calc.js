@@ -1,12 +1,15 @@
 function insert(num){
     let result = document.getElementById('conteudo')
     let conteudo = document.getElementById('conteudo').innerHTML
-    if (num == '0' && conteudo == ''){
-        result.innerHTML = '0.'
+    if (conteudo == '' && num == '0'){
+        result.innerHTML += '0.'
+    } else if (conteudo == '' && num == '00'){
+        result.innerHTML += '0.0'
     } else if (conteudo.length < 11) {
         result.innerHTML += num
     }
 }
+
 
 function insertOperator(sin){
     let result = document.getElementById('conteudo')
@@ -18,20 +21,24 @@ function insertOperator(sin){
     }
 }
 
+
 function insertPoint(){
     let result = document.getElementById('conteudo')
     let conteudo = document.getElementById('conteudo').innerHTML
+    let sins = [conteudo.indexOf('+'), conteudo.indexOf('-'), conteudo.indexOf('*'), conteudo.indexOf('/')]
     if (conteudo == ''){
         result.innerHTML += '0.'
     } else if (conteudo.indexOf('.') == -1) {
         result.innerHTML += '.'
-    }
+    } 
 }
+
 
 function clean(){
     const result = document.getElementById('conteudo')
     result.innerHTML = ''
 }
+
 
 function backSpace(){
     let result = document.getElementById('conteudo').innerHTML 
@@ -42,6 +49,7 @@ function backSpace(){
     }
 }
 
+
 function count(){
     let result = document.getElementById('conteudo').innerHTML
     let conteudo
@@ -51,6 +59,7 @@ function count(){
     }
 
 }
+
 
 function result(){
     let result = document.getElementById('conteudo').innerHTML
