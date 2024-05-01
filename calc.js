@@ -17,9 +17,12 @@ function insertOperator(sin){
     let conteudo = document.getElementById('conteudo').innerHTML
     let ultCar = conteudo.slice(-1)
     let sins = '+-*/'
-    if (conteudo.length > 0 && sins.indexOf(ultCar) == -1){
-        result.innerHTML += sin
+    if (conteudo.length > 0){
+        if (sins.indexOf(ultCar) == -1){
+            result.innerHTML += sin
+        }
     }
+    
 }
 
 
